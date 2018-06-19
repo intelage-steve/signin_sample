@@ -22,7 +22,7 @@ const styles = theme => ({
     left: 0,
     height: '100vh',
     width: '100%',
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.background.light,
   },
   paperContainer: {
     height: '100vh',
@@ -54,15 +54,19 @@ const styles = theme => ({
   divider: {
     height: 3,
     width: '100%',
+    marginLeft: -15,
+
     borderBottom: '2px solid #f9f9f9',
   },
   formContainer: {
 
   },
   textField: {
-    fontWeight: theme.typography.body1
+    fontSize: theme.typography.body1,
+    fontWeight: theme.typography.body1,
   },
   floatingLabelStyle: {
+    fontSize: theme.typography.body1.fontSize,
     fontWeight: 300,
   },
   overlayShow: {
@@ -76,6 +80,15 @@ const styles = theme => ({
     textAlign: 'center',
     paddingTop: 15,
     paddingBottom: 8,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.5rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.75rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2rem',
+    },
   },
   bodyText: {
     ...theme.typography.body1,
